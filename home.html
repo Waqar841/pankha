@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANoFAN - Premium Fans Manufacturer</title>
+    <!-- fav icon -->
+    <link rel="icon" href="imgs/logo.png" type="img/png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="fans.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&display=swap"
+        rel="stylesheet" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #ff6600;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: black;
+
+            font-weight: 400;
+            font-style: italic;
+            font-family: "Poetsen One", sans-serif;
+        }
+
+        .nav-link {
+            color: black;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-transform: uppercase;
+
+        }
+
+        .navbar {
+            background: linear-gradient(to left, #98b4b3, #34ebe2);
+        }
+
+        .search {
+            width: 80%;
+            height: 40px;
+            border-radius: 60px;
+            border: 2px solid #34ebe2;
+            outline: none;
+            margin-right: -35px;
+        }
+
+        .btn0 {
+            border-radius: 60px;
+            height: 40px;
+            width: 40%;
+            background-color: #34ebe2;
+            border: none;
+        }
+
+        .btn0:hover {
+            background-color: #34ebe2;
+            color: white;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("imgs/Extra/hero_cover.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .feedback-form input,
+        .feedback-form textarea,
+        .contact-form input,
+        .contact-form textarea {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .feedback-form input:focus,
+        .feedback-form textarea:focus,
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e65c00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .section-title:after {
+            content: ;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .promo-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-nav button {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-nav button:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .logo {
+            width: 90px;
+            height: 100px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <img src="imgs/Extra/logo.png" class="logo" alt="">
+            <a class="navbar-brand" href="home.html">𝓕𝓐𝓝𝓸𝓕𝓐𝓝</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#gallery">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">About Us</a>
+                    </li>
+                    
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="search" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Experience the Breeze of Innovation</h1>
+                    <p class="lead mb-5">FANoFAN brings you premium quality fans with cutting-edge technology and
+                        energy-efficient designs for your home and office.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#products" class="btn btn-primary btn-lg px-4 me-md-2">Our Products</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Our Featured Products</h2>
+            <div class="row g-4">
+                <!-- Ceiling Fan Card -->
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Ceiling Fan/Buy Best Ceiling Fans Online in India at Best Prices _ Crompton.jpeg"
+                            class="card-img-top" alt="Ceiling Fan">
+                        <div class="card-body">
+                            <h5 class="card-title">BreezeMaster Pro</h5>
+                            <p class="card-text">Premium ceiling fan with remote control and energy-saving DC motor
+                                technology.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Size:</strong> 52 inches</li>
+                                <li class="list-group-item"><strong>Speed:</strong> 6 levels</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 5 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.12,995.00</span>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table Fan Card -->
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Table Fan/12 Inch Metal Desk Fan 3 Speed Oscillating Air Cooling Portable Table Fan Copper.jpg"
+                            class="card-img-top" alt="Table Fan">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Petite Table Fan</h5>
+                            <p class="card-text">Powerful yet quiet table fan with oscillation and adjustable height.
+                            </p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Power:</strong> 45W</li>
+                                <li class="list-group-item"><strong>Speed:</strong> 3 levels</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 2 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.6,395.00</span>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exhaust Fan Card -->
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Exhaust Fan/12 Inch One-way Wind Pressure Exhaust Fan Blinds Ventilation Fan Exhaust Fume Exhaust Strong Exhaust Fan ,Quiet and Water Resistant, LFW-20D.jpeg"
+                            class="card-img-top" alt="Exhaust Fan">
+                        <div class="card-body">
+                            <h5 class="card-title">AirVent Pro</h5>
+                            <p class="card-text">High-performance exhaust fan with moisture sensor and auto shut-off.
+                            </p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 200 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 1.5 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 3 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.2,495.00</span>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Ceiling Fans Section -->
+    <section id="ceiling-fans" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Ceiling Fans</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Ceiling Fan/Possini Euro Design 56_ Vengeance Modern 3 Blade Indoor Ceiling Fan with LED Light Remote Control Chrome Silver White Diffuser for Living Kitchen House Bedroom Family Dining Home Office Kids Room.jpg"
+                            class="card-img-top" alt="Ceiling Fan 1">
+                        <div class="card-body">
+                            <h5 class="card-title">SkyBreeze Deluxe</h5>
+                            <p class="card-text">Modern ceiling fan with LED light and reversible blades.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Size:</strong> 48 inches</li>
+                                <li class="list-group-item"><strong>Motor:</strong> AC induction</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 5 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.18,495.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Ceiling Fan/Jace Ceiling Fan - White-Kichler.jpg" class="card-img-top"
+                            alt="Ceiling Fan 2">
+                        <div class="card-body">
+                            <h5 class="card-title">WindChill Plus</h5>
+                            <p class="card-text">Industrial-grade ceiling fan with high velocity airflow.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Size:</strong> 56 inches</li>
+                                <li class="list-group-item"><strong>Motor:</strong> DC brushless</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 7 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.14,495.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Ceiling Fan/Buy Best Ceiling Fans Online in India at Best Prices _ Crompton.jpeg"
+                            class="card-img-top" alt="Ceiling Fan 3">
+                        <div class="card-body">
+                            <h5 class="card-title">BreezeMaster Pro</h5>
+                            <p class="card-text">Premium ceiling fan with remote control and energy-saving DC motor.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Size:</strong> 52 inches</li>
+                                <li class="list-group-item"><strong>Motor:</strong> DC brushless</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 5 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.12,995.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="ceiling-fan.html" class="btn btn-secondary btn-lg" >View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Fans Section -->
+    <section id="table-fans" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Table Fans</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Table Fan/10 Table Fans That Are _Actually_ Stylish.jpg" class="card-img-top"
+                            alt="Table Fan 1">
+                        <div class="card-body">
+                            <h5 class="card-title">CoolFlow Elite</h5>
+                            <p class="card-text">Powerful yet quiet table fan with oscillation and adjustable height.
+                            </p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Power:</strong> 45W</li>
+                                <li class="list-group-item"><strong>Speed:</strong> 3 levels</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 2 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.3,495.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Table Fan/12 Inch Metal Desk Fan 3 Speed Oscillating Air Cooling Portable Table Fan Copper.jpg"
+                            class="card-img-top" alt="Table Fan 2">
+                        <div class="card-body">
+                            <h5 class="card-title">AirJet Mini</h5>
+                            <p class="card-text">Compact table fan perfect for personal cooling at home or office.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Power:</strong> 30W</li>
+                                <li class="list-group-item"><strong>Speed:</strong> 2 levels</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 1 year</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.5,995.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Table Fan/Belaco 12inch Blue Table Fan Desk Fan with 3 Speed Oscillating cooling fan Stand.jpg"
+                            class="card-img-top" alt="Table Fan 3">
+                        <div class="card-body">
+                            <h5 class="card-title">TurboBreeze Pro</h5>
+                            <p class="card-text">High-velocity table fan with 90° oscillation and tilt adjustment.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Power:</strong> 60W</li>
+                                <li class="list-group-item"><strong>Speed:</strong> 4 levels</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 3 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.7,395.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="table-fan.html" class="btn btn-secondary btn-lg">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhaust Fans Section -->
+    <section id="exhaust-fans" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Exhaust Fans</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Exhaust Fan/(eBay) Industrial Ventilation Extractor Metal Plate Axial Exhaust Fan Commercial Blower.jpg"
+                            class="card-img-top" alt="Exhaust Fan 1">
+                        <div class="card-body">
+                            <h5 class="card-title">AirVent Pro</h5>
+                            <p class="card-text">High-performance exhaust fan with moisture sensor and auto shut-off.
+                            </p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 200 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 1.5 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 3 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.6,795.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Exhaust Fan/12 Inch One-way Wind Pressure Exhaust Fan Blinds Ventilation Fan Exhaust Fume Exhaust Strong Exhaust Fan ,Quiet and Water Resistant, LFW-20D.jpeg"
+                            class="card-img-top" alt="Exhaust Fan 2">
+                        <div class="card-body">
+                            <h5 class="card-title">SteamAway Plus</h5>
+                            <p class="card-text">Bathroom exhaust fan with humidity sensor and timer function.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 110 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 0.8 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 5 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.8,295.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Exhaust Fan/HG Power 6 Inch Exhaust Fan, 308CFM Wall Exhaust Fan for Kitchen, Bathroom, Metal Extractor Fan for Attic, Garage, Window Ventilation, HVAC System, Black.jpg"
+                            class="card-img-top" alt="Exhaust Fan 3">
+                        <div class="card-body">
+                            <h5 class="card-title">IndustrialVent HD</h5>
+                            <p class="card-text">Heavy-duty exhaust fan for commercial kitchens and workshops.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 500 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 3.0 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 2 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.9,695.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="exhaust-fan.html" class="btn btn-secondary btn-lg">View All Products</a>
+            </div>
+        </div>
+    </section>
+    <!-- Pedestal Fans Section -->
+    <section id="pedestal-fans" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Pedestal Fans Fans</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Pedestal Fan/DIGISMART Mark-2 High Speed 2400 RPM 400mm (16 Inches) Bullet Fan_Farata Fan_Pedestal Fan wit___.jpg"
+                            class="card-img-top" alt="Pedestal Fan 1">
+                        <div class="card-body">
+                            <h5 class="card-title">AirVent Pro</h5>
+                            <p class="card-text">High-performance exhaust fan with moisture sensor and auto shut-off.
+                            </p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 200 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 1.5 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 3 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.10,995.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Pedestal Fan/Lifelong LLPF922 Pedestal Fan for Cooling with Automatic Oscillation _ Home, Kitchen & Office___.jpg"
+                            class="card-img-top" alt="Pedestal Fan 2">
+                        <div class="card-body">
+                            <h5 class="card-title">SteamAway Plus</h5>
+                            <p class="card-text">Bathroom exhaust fan with humidity sensor and timer function.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 110 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 0.8 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 5 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.14,995.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Pedestal Fan/Olivia & Olivia Pro Pedestal Fan.jpg" class="card-img-top"
+                            alt="Pedestal Fan 3">
+                        <div class="card-body">
+                            <h5 class="card-title">IndustrialVent HD</h5>
+                            <p class="card-text">Heavy-duty exhaust fan for commercial kitchens and workshops.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 500 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 3.0 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 2 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.15,495.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="pedestal-fan.html" class="btn btn-secondary btn-lg">View All Products</a>
+            </div>
+        </div>
+    </section>
+    <!-- Room Coolers Section -->
+    <section id="room-coolers" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Room Coolers</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Room Coolers/Orient Electric Knight.jpg" class="card-img-top"
+                            alt="Room Cooler 1">
+                        <div class="card-body">
+                            <h5 class="card-title">AirVent Pro</h5>
+                            <p class="card-text">High-performance exhaust fan with moisture sensor and auto shut-off.
+                            </p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 200 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 1.5 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 3 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.21,000.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Room Coolers/Hessaire MC18 1,300 CFM Evaporative Cooler.jpg" class="card-img-top"
+                            alt="Room Cooler 2">
+                        <div class="card-body">
+                            <h5 class="card-title">SteamAway Plus</h5>
+                            <p class="card-text">Bathroom exhaust fan with humidity sensor and timer function.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 110 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 0.8 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 5 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.19,390.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="imgs/Room Coolers/Orient ® Air Cooler- 20 Liter ISI Certified (Model- Smart Cool DX) Medium Size for Home Room ___.jpg"
+                            class="card-img-top" alt=" Room Cooler 3">
+                        <div class="card-body">
+                            <h5 class="card-title">IndustrialVent HD</h5>
+                            <p class="card-text">Heavy-duty exhaust fan for commercial kitchens and workshops.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Airflow:</strong> 500 CFM</li>
+                                <li class="list-group-item"><strong>Noise:</strong> 3.0 Sones</li>
+                                <li class="list-group-item"><strong>Warranty:</strong> 2 years</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">Rs.29,900.00</span>
+                                <a href="#" class="btn btn-primary">Download Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="room-coolers.html" class="btn btn-secondary btn-lg">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Our Gallery</h2>
+            <div class="row g-3">
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="imgs/Ceiling Fan/Usha Striker Platinum 1200mm 80-watt Goodbye Dust Ceiling Fan with Anti Dust Feature (Deep Me___.jpg"
+                            class="img-fluid w-100" alt="Gallery Image 1"
+                            >
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="imgs/Extra/download (1).jpg" class="img-fluid w-100" alt="Gallery Image 2">
+                            
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="imgs/Pedestal Fan/🤣 BLOWING HOT AIR_ LET THIS FAN DO IT FOR YOU….jpg" class="img-fluid w-100" alt="Gallery Image 3">
+                       
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="imgs/Table Fan/Rechargeable Fan.jpg" class="img-fluid w-100" alt="Gallery Image 4">
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="imgs/Table Fan/Dreo Fan for Bedroom, 12 Inches, 70ft Powerful Airflow, 28db Quiet Table Air Circulator Fans for Whole Room, 120° Adjustable Tilt, 3 Speeds, Desktop Fan for Home, Office, Kitchen.jpg"
+                            class="img-fluid w-100" alt="Gallery Image 5">
+                            
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="imgs/Exhaust Fan/Venta 6-Inch Bathroom Exhaust Fan - Quiet Wall Mount Bathroom Fan - Vent Fan for Kitchen, Garage, Office, Laundry Room - 1_7 Sones, 320m³_h, 18W - White.jpg"
+                            class="img-fluid w-100" alt="Gallery Image 6">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <!-- <div id="lightbox" class="lightbox">
+        <!-- <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-caption" class="text-center text-white mt-3"></p>
+        </div>
+        <div class="lightbox-nav">
+            <button onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+            <button onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div> --> -->
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <h2 class="text-center section-title">Customer Feedback</h2>
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rating" class="form-label">Rating</label>
+                            <select id="rating" name="rating" class="form-select">
+                                <option value="5">Excellent</option>
+                                <option value="4">Very Good</option>
+                                <option value="3">Good</option>
+                                <option value="2">Fair</option>
+                                <option value="1">Poor</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Feedback</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">About FANoFAN</h2>
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-6">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2018, FANoFAN has grown from a small workshop to one of the leading fan manufacturers
+                        in the region. Our commitment to quality and innovation has made us a trusted name in home and
+                        commercial cooling solutions.</p>
+                    <p>With over 25 years of experience, we've perfected the art of creating fans that combine
+                        performance, durability, and energy efficiency.</p>
+
+                    <h3 class="mt-4">Our Mission</h3>
+                    <p>To provide innovative, high-quality cooling solutions that enhance comfort while reducing energy
+                        consumption and environmental impact.</p>
+
+                    <h3 class="mt-4">Our Vision</h3>
+                    <p>To be the preferred choice for cooling solutions worldwide, recognized for our commitment to
+                        quality, sustainability, and customer satisfaction.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Contact Us</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form id="contactForm" class="contact-form">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactSubject" class="form-label">Subject</label>
+                            <input type="text" id="contactSubject" name="contactSubject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Our Office</h3>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i> Address</h5>
+                                <p>123 Industrial Park, Lasbela Chowk, Karachi City, Pakistan</p>
+
+                            </div>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-phone me-2"></i> Phone</h5>
+                                <p>+92 331 3558783</p>
+                            </div>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-envelope me-2"></i> Email</h5>
+                                <p>info@fanofan.com</p>
+                            </div>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-clock me-2"></i> Business Hours</h5>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                    Saturday: 10:00 AM - 4:00 PM<br>
+                                    Sunday: Closed</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertise Section
+    <section id="advertise" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Special Offers</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card promo-card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0 text-center">Dealer Partnership</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Become an Authorized Dealer</h5>
+                            <p class="card-text">Join our network of dealers and enjoy exclusive benefits including:</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Competitive wholesale pricing</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Marketing support</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Priority order fulfillment</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Training programs</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card promo-card h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <h4 class="mb-0 text-center">Warranty Program</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Extended Warranty Options</h5>
+                            <p class="card-text">Protect your investment with our comprehensive warranty programs:</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Standard 2-5 year warranty</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Extended warranty available</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Quick claim processing</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Nationwide service network</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-warning w-100 text-white">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card promo-card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h4 class="mb-0 text-center">Bulk Orders</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special Pricing for Bulk Orders</h5>
+                            <p class="card-text">Save more when you order in quantity for:</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Contractors</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Hotels & Resorts</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Office Buildings</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Educational Institutions</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-success w-100">Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card promo-card">
+                        <div class="card-header bg-danger text-white">
+                            <h4 class="mb-0 text-center">Seasonal Promotion</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h3>Summer Cool Down Sale!</h3>
+                                    <p class="lead">Get up to 30% off on select ceiling fans and table fans. Limited time offer valid until August 31st.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="me-3">
+                                            <span class="badge bg-dark fs-5">30% OFF</span>
+                                        </div>
+                                        <div>
+                                            <small class="text-muted">Use code: <strong>COOL2023</strong> at checkout</small>
+                                        </div>
+                                    </div>
+                                    <a href="#products" class="btn btn-danger btn-lg">Shop Now</a>
+                                </div>
+                                <div class="col-md-4 d-none d-md-block">
+                                    <img src="https://images.unsplash.com/photo-1587583775025-0d0431e05651?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded" alt="Summer Sale">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Site Map Section -->
+    <section id="sitemap" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Site Map</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Main Pages</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="#feedback" class="text-decoration-none">Feedback</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Products</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#ceiling-fans" class="text-decoration-none">Ceiling Fans</a></li>
+                        <li class="mb-2"><a href="#table-fans" class="text-decoration-none">Table Fans</a></li>
+                        <li class="mb-2"><a href="#exhaust-fans" class="text-decoration-none">Exhaust Fans</a></li>
+                        <li class="mb-2"><a href="#pedestal-fans" class="text-decoration-none">Pedestal Fans</a></li>
+                        <li class="mb-2"><a href="#room-coolers" class="text-decoration-none">Room Coolers</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-decoration-none">Product Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Resources</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Product Manuals</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Installation Guides</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Warranty Information</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="imgs/Extra/logo.png" alt="FANoFAN Logo" class="mb-3" id="footerLogo" style="width: 70px;">
+
+                    <h5>𝓕𝓐𝓝𝓸𝓕𝓐𝓝</h5>
+                    <p class="text-bold">FANoFAN is a leading manufacturer of high-quality ceiling, table, and exhaust
+                        fans. Our products are designed to provide optimal airflow and energy efficiency for homes and
+                        businesses.</p>
+
+                    <div class="mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Products</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Ceiling Fans</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Table Fans</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Exhaust Fans</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Industrial Fans</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Warranty</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Product Registration</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Service Centers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-headset me-3 fs-4"></i>
+                        <div>
+                            <h6 class="mb-0">Customer Support</h6>
+                            <p class="mb-0">+92 (331) 3558783</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 FANoFAN. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop" class="back-to-top">
+        <i class="fa-sharp fa-solid fa-angle-up" style="color: #f7f7f7;"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form Validation
+        $(document).ready(function () {
+            $('#feedbackForm').submit(function (e) {
+                e.preventDefault();
+                const name = $('#name').val();
+                const email = $('#email').val();
+                const message = $('#message').val();
+
+                if (name && email && message) {
+                    alert('Thank you for your feedback! We appreciate your input.');
+                    $('#feedbackForm')[0].reset();
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+
+            $('#contactForm').submit(function (e) {
+                e.preventDefault();
+                const name = $('#contactName').val();
+                const email = $('#contactEmail').val();
+                const subject = $('#contactSubject').val();
+                const message = $('#contactMessage').val();
+
+                if (name && email && subject && message) {
+                    alert('Thank you for your message! We will get back to you soon.');
+                    $('#contactForm')[0].reset();
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        });
+
+        // Lightbox functionality
+        // const images = [
+        //     { src: 'https://images.unsplash.com/photo-1594223274510-6b017977a6e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', caption: 'Ceiling Fan Installation' },
+        //     { src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', caption: 'Modern Living Room' },
+        //     { src: 'https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', caption: 'Bedroom Ceiling Fan' },
+        //     { src: 'https://images.unsplash.com/photo-1589391886179-84b9b864fdba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', caption: 'Office Table Fan' },
+        //     { src: 'https://images.unsplash.com/photo-1587583775025-0d0431e05651?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', caption: 'Compact Table Fan' },
+        //     { src: 'https://images.unsplash.com/photo-1600566752227-8d5e46d8f382?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', caption: 'Bathroom Exhaust Fan' }
+        // ];
+
+        // let currentImageIndex = 0;
+
+        // function openLightbox(src, caption) {
+        //     const lightbox = document.getElementById('lightbox');
+        //     const lightboxImg = document.getElementById('lightbox-img');
+        //     const lightboxCaption = document.getElementById('lightbox-caption');
+
+        //     // Find the index of the clicked image
+        //     currentImageIndex = images.findIndex(img => img.src === src);
+
+        //     lightboxImg.src = src;
+        //     lightboxCaption.textContent = caption;
+        //     lightbox.style.display = 'flex';
+        //     document.body.style.overflow = 'hidden';
+        // }
+
+        // function closeLightbox() {
+        //     const lightbox = document.getElementById('lightbox');
+        //     lightbox.style.display = 'none';
+        //     document.body.style.overflow = 'auto';
+        // }
+
+        // function prevImage() {
+        //     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        //     updateLightboxImage();
+        // }
+
+        // function nextImage() {
+        //     currentImageIndex = (currentImageIndex + 1) % images.length;
+        //     updateLightboxImage();
+        // }
+
+        // function updateLightboxImage() {
+        //     const lightboxImg = document.getElementById('lightbox-img');
+        //     const lightboxCaption = document.getElementById('lightbox-caption');
+
+        //     lightboxImg.src = images[currentImageIndex].src;
+        //     lightboxCaption.textContent = images[currentImageIndex].caption;
+        // }
+
+        // // Close lightbox when clicking outside the image
+        // document.getElementById('lightbox').addEventListener('click', function (e) {
+        //     if (e.target === this) {
+        //         closeLightbox();
+        //     }
+        // });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
